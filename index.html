@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly - Next-Gen Cybersecurity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+</head>
+<body>
+  <!-- 3D Background Canvas -->
+  <div id="canvas-container" aria-hidden="true" role="presentation"></div>
+  <div id="node-info-panel" class="node-info-panel"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">
+      <img src="assets/images/logo.webp" alt="Stackly logo" class="logo-img">
+      <span>Stackly</span>
+    </a>
+    <div class="navbar-nav">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+    <div class="navbar-auth" style="display:flex;align-items:center;gap:16px;">
+      <a href="login.html" class="nav-link">Login</a>
+      <a href="register.html" class="navbar-cta">Get Protected</a>
+    </div>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav">
+    <a href="index.html" class="nav-link active">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="services.html" class="nav-link">Services</a>
+    <a href="blog.html" class="nav-link">Blog</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="login.html" class="nav-link">Login</a>
+    <a href="register.html" class="btn btn-primary" style="margin-top:8px;">Get Protected</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="label label-accent">Next-Gen Cybersecurity</span>
+      <h1>We Secure Your Digital Infrastructure in Real-Time</h1>
+      <p>AI-powered threat detection. 24/7 network monitoring. Zero-trust architecture for enterprises that take security seriously.</p>
+      <div class="hero-buttons">
+        <a href="register.html" class="btn btn-accent btn-lg">Start Free Trial</a>
+        <a href="#stats" class="hero-link">
+          <span class="pulse-dot"></span>
+          View Live Dashboard
+        </a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">Active Nodes: 2,847</div>
+      <div class="hero-stat">Threats Blocked: 1.2M</div>
+      <div class="hero-stat">Uptime: 99.99%</div>
+    </div>
+  </section>
+
+  <!-- Trusted By Section -->
+  <section class="trusted-band">
+    <div class="container">
+      <p class="trusted-label">Trusted by industry leaders</p>
+      <div class="logos-row animate-stagger">
+        <span class="client-logo">TechFlow</span>
+        <span class="client-logo">DataVault</span>
+        <span class="client-logo">CloudSecure</span>
+        <span class="client-logo">NetGuard</span>
+        <span class="client-logo">CipherCore</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Values / About Section -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="grid-2">
+        <div class="animate-slide-left">
+          <span class="label label-primary">Our Approach</span>
+          <h2 style="margin:12px 0 16px;">Security Built on Three Pillars</h2>
+          <p style="margin-bottom:32px;">We combine proactive threat intelligence, zero-trust network architecture, and continuous compliance monitoring to create a security posture that adapts as fast as the threats evolve.</p>
+          <div class="value-item">
+            <div class="value-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <div class="value-content">
+              <h4>Zero-Trust Architecture</h4>
+              <p>Every access request is verified, regardless of origin. No implicit trust.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </div>
+            <div class="value-content">
+              <h4>Continuous Monitoring</h4>
+              <p>24/7 automated surveillance with AI-powered anomaly detection.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            </div>
+            <div class="value-content">
+              <h4>Compliance-First Design</h4>
+              <p>SOC 2, ISO 27001, and GDPR compliance built into every layer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="animate-slide-right">
+          <img src="assets/images/soc-room.webp" alt="Security Operations Center" style="border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview Section -->
+  <section class="section" style="background:white;">
+    <div class="container">
+      <div class="section-header">
+        <span class="label label-primary">What We Do</span>
+        <h2>End-to-End Security Solutions</h2>
+        <p>From penetration testing to managed security operations, we cover every angle.</p>
+      </div>
+      <div class="grid-3 animate-stagger">
+        <div class="service-card">
+          <div class="card-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+          </div>
+          <h3>Network Security</h3>
+          <p>Firewall management, intrusion detection, and secure VPN infrastructure for distributed teams.</p>
+          <a href="services.html" class="service-link">Learn more &rarr;</a>
+        </div>
+        <div class="service-card">
+          <div class="card-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+          </div>
+          <h3>Cloud Security</h3>
+          <p>Multi-cloud security posture management for AWS, Azure, and GCP environments.</p>
+          <a href="services.html" class="service-link">Learn more &rarr;</a>
+        </div>
+        <div class="service-card">
+          <div class="card-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+          </div>
+          <h3>Compliance &amp; Audit</h3>
+          <p>Automated compliance scanning and audit-ready documentation generation.</p>
+          <a href="services.html" class="service-link">Learn more &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Network Stats Section -->
+  <section class="section section-dark" id="stats">
+    <div class="container">
+      <div class="section-header">
+        <span class="label label-accent">Live Dashboard</span>
+        <h2>Your Network, Visualized</h2>
+        <p>The visualization behind this page is a live simulation of our monitoring platform. Every node represents a real endpoint.</p>
+      </div>
+      <div class="grid-3 animate-stagger">
+        <div class="stat-card">
+          <div class="stat-number green animate-counter" data-target="99.99" data-suffix="%">10%</div>
+          <div class="stat-label">Average Uptime</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number blue">&lt; <span class="animate-counter" data-target="50" data-suffix="ms">24</span></div>
+          <div class="stat-label">Threat Response Time</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number amber animate-counter" data-target="2847" data-suffix="">45</div>
+          <div class="stat-label">Protected Endpoints</div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:48px;">
+        <a href="contact.html" class="btn btn-outline btn-lg">Explore Full Dashboard</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="label label-primary">Client Stories</span>
+        <h2>Trusted by Security Teams Worldwide</h2>
+      </div>
+      <div class="testimonials-scroll">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"Stackly reduced our incident response time by 80%. The real-time dashboard gives our SOC team complete visibility."</p>
+          <div class="testimonial-author">
+            <img src="assets/images/testimonial-1.webp" alt="Sarah Chen" class="testimonial-avatar">
+            <div>
+              <div class="testimonial-name">Sarah Chen</div>
+              <div class="testimonial-title">CISO at TechFlow</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"The zero-trust implementation was seamless. Stackly understood our complex infrastructure and delivered beyond expectations."</p>
+          <div class="testimonial-author">
+            <img src="assets/images/testimonial-2.webp" alt="Marcus Johnson" class="testimonial-avatar">
+            <div>
+              <div class="testimonial-name">Marcus Johnson</div>
+              <div class="testimonial-title">VP Engineering at DataVault</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"Compliance audits used to take weeks. With Stackly, we generate SOC 2 reports in minutes. Game changer for our team."</p>
+          <div class="testimonial-author">
+            <img src="assets/images/testimonial-3.webp" alt="Elena Rodriguez" class="testimonial-avatar">
+            <div>
+              <div class="testimonial-name">Elena Rodriguez</div>
+              <div class="testimonial-title">Security Lead at CloudSecure</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"We evaluated 12 security vendors. Stackly's AI detection accuracy and integration capabilities made the decision easy."</p>
+          <div class="testimonial-author">
+            <img src="assets/images/testimonial-4.webp" alt="David Park" class="testimonial-avatar">
+            <div>
+              <div class="testimonial-name">David Park</div>
+              <div class="testimonial-title">CTO at NetGuard</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study Section -->
+  <section class="section" style="background:white;">
+    <div class="container">
+      <div class="grid-2">
+        <div class="animate-slide-left">
+          <img src="assets/images/dashboard-ui.webp" alt="Security Dashboard" style="border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);">
+        </div>
+        <div class="animate-slide-right">
+          <span class="label label-accent">Case Study</span>
+          <h2 style="margin:12px 0 16px;">How TechFlow Blocked 2.3M Threats in 30 Days</h2>
+          <p style="margin-bottom:24px;">When TechFlow experienced a 400% increase in phishing attempts, Stackly's AI detection system identified and neutralized threats before any credentials were compromised.</p>
+          <div class="case-study-metrics">
+            <div class="metric-item">
+              <div class="metric-number">2.3M</div>
+              <div class="metric-label">Threats Blocked</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-number green">80%</div>
+              <div class="metric-label">Faster Response</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-number">$1.2M</div>
+              <div class="metric-label">Saved in Downtime</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-number green">0</div>
+              <div class="metric-label">Breaches</div>
+            </div>
+          </div>
+          <a href="blog.html" class="service-link">Read Full Case Study &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Preview Section -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="label label-primary">From The Blog</span>
+        <h2>Latest Security Insights</h2>
+        <p>Stay ahead of emerging threats with analysis from our research team.</p>
+      </div>
+      <div class="grid-3 animate-stagger">
+        <article class="blog-card">
+          <img src="assets/images/blog-vpn.webp" alt="VPN Security" class="blog-card-image">
+          <div class="blog-card-content">
+            <span class="blog-category" style="color:var(--accent);">Threat Intel</span>
+            <h3>Zero-Day Exploit Targets Popular VPN Software</h3>
+            <p class="blog-date">March 15, 2026</p>
+            <p class="blog-excerpt">A critical vulnerability discovered in enterprise VPN solutions affects over 50,000 organizations globally.</p>
+          </div>
+        </article>
+        <article class="blog-card">
+          <img src="assets/images/blog-compliance.webp" alt="NIS2 Compliance" class="blog-card-image">
+          <div class="blog-card-content">
+            <span class="blog-category" style="color:var(--secondary);">Compliance</span>
+            <h3>Preparing for NIS2: What EU Companies Must Know</h3>
+            <p class="blog-date">March 8, 2026</p>
+            <p class="blog-excerpt">The new NIS2 directive expands cybersecurity requirements. Here's how to prepare your organization.</p>
+          </div>
+        </article>
+        <article class="blog-card">
+          <img src="assets/images/blog-cloud.webp" alt="Cloud Security" class="blog-card-image">
+          <div class="blog-card-content">
+            <span class="blog-category" style="color:var(--primary);">Cloud Security</span>
+            <h3>Multi-Cloud Security Posture Management Guide</h3>
+            <p class="blog-date">February 28, 2026</p>
+            <p class="blog-excerpt">Managing security across AWS, Azure, and GCP requires a unified approach. Our guide shows you how.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="section" style="background:white;">
+    <div class="container">
+      <div class="section-header">
+        <span class="label label-primary">Pricing</span>
+        <h2>Choose Your Protection Level</h2>
+        <p>Flexible plans for teams of all sizes. All plans include our core AI threat detection engine.</p>
+      </div>
+      <div class="grid-3 animate-stagger" style="align-items:start;">
+        <div class="pricing-card">
+          <div class="pricing-name">Starter</div>
+          <p class="pricing-desc">For small teams getting started with security</p>
+          <div class="pricing-price">$49</div>
+          <p class="pricing-period">per month</p>
+          <ul class="pricing-features">
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Up to 50 endpoints</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Basic threat detection</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Email alerts</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Weekly reports</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Community support</li>
+          </ul>
+          <a href="register.html" class="btn btn-primary" style="width:100%;">Get Started</a>
+        </div>
+        <div class="pricing-card featured">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-name">Professional</div>
+          <p class="pricing-desc">For growing teams that need advanced protection</p>
+          <div class="pricing-price">$149</div>
+          <p class="pricing-period">per month</p>
+          <ul class="pricing-features">
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Up to 500 endpoints</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> AI-powered detection</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Real-time alerts</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Compliance reports</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Priority support</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> API access</li>
+          </ul>
+          <a href="register.html" class="btn btn-primary" style="width:100%;">Get Started</a>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-name">Enterprise</div>
+          <p class="pricing-desc">For large organizations with complex needs</p>
+          <div class="pricing-price">Custom</div>
+          <p class="pricing-period">contact us</p>
+          <ul class="pricing-features">
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Unlimited endpoints</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Full AI suite</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Dedicated engineer</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Custom integrations</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> 24/7 phone support</li>
+            <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> SLA guarantee</li>
+          </ul>
+          <a href="contact.html" class="btn btn-dark" style="width:100%;">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section section-light">
+    <div class="container" style="max-width:800px;">
+      <div class="section-header">
+        <span class="label label-primary">FAQ</span>
+        <h2>Common Questions</h2>
+      </div>
+      <div class="faq-list animate-stagger">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span class="faq-question-text">How does Stackly's threat detection work?</span>
+            <svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Our AI engine analyzes network traffic patterns in real-time, comparing behavior against a database of 50M+ known threat signatures and anomalous patterns. When a potential threat is detected, our system automatically isolates the affected endpoint and alerts your security team within seconds.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span class="faq-question-text">What compliance standards does Stackly support?</span>
+            <svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>We provide built-in compliance monitoring for SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, and NIS2. Our platform generates audit-ready reports and continuously scans your infrastructure for compliance drift.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span class="faq-question-text">Can Stackly integrate with our existing security tools?</span>
+            <svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Stackly integrates with 200+ security and IT tools including Splunk, CrowdStrike, Okta, AWS Security Hub, Azure Sentinel, and Google Chronicle. Our REST API and webhook system enable custom integrations.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span class="faq-question-text">What is the typical deployment timeline?</span>
+            <svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Most organizations are fully deployed within 2-3 business days. Our lightweight agents install in minutes and begin monitoring immediately. Complex multi-cloud environments may take up to one week for complete configuration.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span class="faq-question-text">Do you offer 24/7 support?</span>
+            <svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. All plans include access to our security operations center, with Premium and Enterprise customers receiving a dedicated security engineer and 15-minute SLA response times.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/images/logo.webp" alt="Stackly logo" class="logo-img">
+          <span>Stackly</span>
+        </div>
+        <p class="footer-desc">Enterprise-grade cybersecurity for modern teams. AI-powered threat detection, continuous monitoring, and compliance automation.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Product</h4>
+        <ul class="footer-links">
+          <li><a href="services.html">Network Security</a></li>
+          <li><a href="services.html">Cloud Security</a></li>
+          <li><a href="services.html">Compliance</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a href="services.html">Integrations</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <ul class="footer-links">
+          <li><a href="services.html">Documentation</a></li>
+          <li><a href="services.html">API Reference</a></li>
+          <li><a href="blog.html">Case Studies</a></li>
+          <li><a href="index.html#stats">Status Page</a></li>
+          <li><a href="contact.html">Community</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 Stackly, Inc. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="404.html">Privacy Policy</a>
+        <a href="404.html">Terms of Service</a>
+        <a href="404.html">Cookie Settings</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

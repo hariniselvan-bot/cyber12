@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - Stackly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">
+      <img src="assets/images/logo.webp" alt="Stackly logo" class="logo-img">
+      <span>Stackly</span>
+    </a>
+    <div class="navbar-nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link active">Services</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+    <div class="navbar-auth" style="display:flex;align-items:center;gap:16px;">
+      <a href="login.html" class="nav-link">Login</a>
+      <a href="register.html" class="navbar-cta">Get Protected</a>
+    </div>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="services.html" class="nav-link active">Services</a>
+    <a href="blog.html" class="nav-link">Blog</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+  </div>
+
+  <!-- Page Header -->
+  <section class="section section-dark" style="padding-top:140px;padding-bottom:80px;text-align:center;">
+    <div class="container">
+      <span class="label label-accent">Services</span>
+      <h1 style="color:white;margin-top:16px;font-size:48px;">Comprehensive Security Solutions</h1>
+      <p style="color:rgba(255,255,255,0.7);max-width:600px;margin:16px auto 0;">End-to-end protection for your network, cloud, and applications. Built for modern enterprises.</p>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="section" style="background:white;">
+    <div class="container">
+      <div class="grid-3 animate-stagger">
+        <div class="service-card">
+          <div class="card-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg></div>
+          <h3>Network Security</h3>
+          <p>Comprehensive firewall management, intrusion detection and prevention systems (IDS/IPS), and secure VPN infrastructure for distributed teams. We monitor your network perimeter 24/7.</p>
+          <ul style="margin-top:16px;font-size:14px;color:var(--gray-light);line-height:2;">
+            <li>&bull; Next-gen firewall management</li>
+            <li>&bull; Intrusion detection &amp; prevention</li>
+            <li>&bull; Secure VPN &amp; Zero Trust access</li>
+            <li>&bull; Network segmentation</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="card-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg></div>
+          <h3>Cloud Security</h3>
+          <p>Multi-cloud security posture management for AWS, Azure, and GCP environments. Continuous compliance monitoring and automated remediation for cloud-native infrastructure.</p>
+          <ul style="margin-top:16px;font-size:14px;color:var(--gray-light);line-height:2;">
+            <li>&bull; CSPM across AWS/Azure/GCP</li>
+            <li>&bull; Container &amp; Kubernetes security</li>
+            <li>&bull; Cloud workload protection</li>
+            <li>&bull; IaC security scanning</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="card-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg></div>
+          <h3>Compliance &amp; Audit</h3>
+          <p>Automated compliance scanning and audit-ready documentation generation. Stay compliant with SOC 2, ISO 27001, GDPR, HIPAA, and more without the manual effort.</p>
+          <ul style="margin-top:16px;font-size:14px;color:var(--gray-light);line-height:2;">
+            <li>&bull; SOC 2, ISO 27001, GDPR</li>
+            <li>&bull; Automated evidence collection</li>
+            <li>&bull; Audit-ready reporting</li>
+            <li>&bull; Continuous compliance drift</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="card-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg></div>
+          <h3>Penetration Testing</h3>
+          <p>Expert-led penetration testing to identify vulnerabilities before attackers do. Comprehensive reports with actionable remediation steps and retesting included.</p>
+          <ul style="margin-top:16px;font-size:14px;color:var(--gray-light);line-height:2;">
+            <li>&bull; Network &amp; web app testing</li>
+            <li>&bull; Social engineering assessments</li>
+            <li>&bull; Red team exercises</li>
+            <li>&bull; Detailed remediation reports</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="card-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div>
+          <h3>Incident Response</h3>
+          <p>24/7 incident response team ready to contain, investigate, and remediate security incidents. Average response time under 15 minutes for critical alerts.</p>
+          <ul style="margin-top:16px;font-size:14px;color:var(--gray-light);line-height:2;">
+            <li>&bull; 24/7 response team</li>
+            <li>&bull; Forensic investigation</li>
+            <li>&bull; Threat containment</li>
+            <li>&bull; Post-incident analysis</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="card-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></div>
+          <h3>Threat Intelligence</h3>
+          <p>AI-powered threat intelligence platform that monitors dark web forums, threat actor infrastructure, and global attack patterns to predict and prevent attacks.</p>
+          <ul style="margin-top:16px;font-size:14px;color:var(--gray-light);line-height:2;">
+            <li>&bull; Dark web monitoring</li>
+            <li>&bull; Threat actor tracking</li>
+            <li>&bull; Vulnerability intelligence</li>
+            <li>&bull; Custom threat feeds</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="label label-primary">How It Works</span>
+        <h2>Simple Deployment, Powerful Protection</h2>
+        <p>Get started with Stackly in three easy steps. No complex setup required.</p>
+      </div>
+      <div class="grid-3 animate-stagger" style="text-align:center;">
+        <div style="padding:32px;">
+          <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--primary-dark));display:flex;align-items:center;justify-content:center;margin:0 auto 20px;color:white;font-size:28px;font-weight:800;">1</div>
+          <h3>Connect Your Infrastructure</h3>
+          <p style="margin-top:12px;">Deploy our lightweight agents across your network, cloud, and endpoints. Integration takes minutes, not days.</p>
+        </div>
+        <div style="padding:32px;">
+          <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--secondary),#047857);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;color:white;font-size:28px;font-weight:800;">2</div>
+          <h3>AI Analyzes in Real-Time</h3>
+          <p style="margin-top:12px;">Our AI engine continuously monitors all traffic and behaviors, learning your environment to detect anomalies instantly.</p>
+        </div>
+        <div style="padding:32px;">
+          <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#d97706);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;color:white;font-size:28px;font-weight:800;">3</div>
+          <h3>Respond &amp; Remediate</h3>
+          <p style="margin-top:12px;">Automated threat response isolates affected systems while our team provides expert guidance for full remediation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Integration Ecosystem -->
+  <section class="section" style="background:white;">
+    <div class="container">
+      <div class="section-header">
+        <span class="label label-primary">Integrations</span>
+        <h2>Works With Your Existing Stack</h2>
+        <p>Connect Stackly with 200+ tools you already use. No rip-and-replace required.</p>
+      </div>
+      <div class="animate-stagger" style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px;">
+        <div style="padding:16px 32px;background:var(--light);border-radius:var(--radius);font-weight:600;color:var(--dark);border:1px solid var(--border);">Splunk</div>
+        <div style="padding:16px 32px;background:var(--light);border-radius:var(--radius);font-weight:600;color:var(--dark);border:1px solid var(--border);">CrowdStrike</div>
+        <div style="padding:16px 32px;background:var(--light);border-radius:var(--radius);font-weight:600;color:var(--dark);border:1px solid var(--border);">AWS</div>
+        <div style="padding:16px 32px;background:var(--light);border-radius:var(--radius);font-weight:600;color:var(--dark);border:1px solid var(--border);">Azure</div>
+        <div style="padding:16px 32px;background:var(--light);border-radius:var(--radius);font-weight:600;color:var(--dark);border:1px solid var(--border);">GCP</div>
+        <div style="padding:16px 32px;background:var(--light);border-radius:var(--radius);font-weight:600;color:var(--dark);border:1px solid var(--border);">Okta</div>
+        <div style="padding:16px 32px;background:var(--light);border-radius:var(--radius);font-weight:600;color:var(--dark);border:1px solid var(--border);">Sentinel</div>
+        <div style="padding:16px 32px;background:var(--light);border-radius:var(--radius);font-weight:600;color:var(--dark);border:1px solid var(--border);">Chronicle</div>
+        <div style="padding:16px 32px;background:var(--light);border-radius:var(--radius);font-weight:600;color:var(--dark);border:1px solid var(--border);">ServiceNow</div>
+        <div style="padding:16px 32px;background:var(--light);border-radius:var(--radius);font-weight:600;color:var(--dark);border:1px solid var(--border);">PagerDuty</div>
+        <div style="padding:16px 32px;background:var(--light);border-radius:var(--radius);font-weight:600;color:var(--dark);border:1px solid var(--border);">Jira</div>
+        <div style="padding:16px 32px;background:var(--light);border-radius:var(--radius);font-weight:600;color:var(--dark);border:1px solid var(--border);">Slack</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="background:linear-gradient(135deg,var(--primary),var(--secondary));text-align:center;">
+    <div class="container">
+      <h2 style="color:white;margin-bottom:16px;">Start Protecting Your Business Today</h2>
+      <p style="color:rgba(255,255,255,0.9);max-width:500px;margin:0 auto 32px;">Get a free security assessment and see how Stackly can strengthen your defenses.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="register.html" class="btn btn-accent btn-lg">Get Free Assessment</a>
+        <a href="contact.html" class="btn btn-outline btn-lg">Talk to an Expert</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/images/logo.webp" alt="Stackly logo" class="logo-img">
+          <span>Stackly</span>
+        </div>
+        <p class="footer-desc">Enterprise-grade cybersecurity for modern teams. AI-powered threat detection, continuous monitoring, and compliance automation.</p>
+      </div>
+      <div class="footer-column"><h4>Product</h4><ul class="footer-links"><li><a href="services.html">Network Security</a></li><li><a href="services.html">Cloud Security</a></li><li><a href="services.html">Compliance</a></li><li><a href="index.html">Pricing</a></li><li><a href="services.html">Integrations</a></li></ul></div>
+      <div class="footer-column"><h4>Company</h4><ul class="footer-links"><li><a href="about.html">About</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Careers</a></li><li><a href="contact.html">Contact</a></li><li><a href="contact.html">Partners</a></li></ul></div>
+      <div class="footer-column"><h4>Resources</h4><ul class="footer-links"><li><a href="services.html">Documentation</a></li><li><a href="services.html">API Reference</a></li><li><a href="blog.html">Case Studies</a></li><li><a href="index.html">Status Page</a></li><li><a href="contact.html">Community</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 Stackly, Inc. All rights reserved.</p>
+      <div class="footer-legal"><a href="404.html">Privacy Policy</a><a href="404.html">Terms of Service</a><a href="404.html">Cookie Settings</a></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

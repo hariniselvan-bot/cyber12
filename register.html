@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Stackly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">
+      <img src="assets/images/logo.webp" alt="Stackly logo" class="logo-img">
+      <span>Stackly</span>
+    </a>
+    <div class="navbar-nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;">
+      <a href="login.html" class="nav-link">Login</a>
+    </div>
+    <button class="mobile-menu-btn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- Register Page -->
+  <div class="auth-page">
+    <div class="auth-card animate-fade" style="max-width:500px;">
+      <div class="auth-header">
+        <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;margin-bottom:24px;font-weight:800;font-size:20px;color:var(--dark);">
+          <svg viewBox="0 0 28 28" fill="none" width="28" height="28">
+            <rect x="2" y="2" width="24" height="24" rx="6" fill="url(#aLogo)"/>
+            <path d="M9 14l4-4 6 6m0 0l-4 4m4-4L9 14" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs><linearGradient id="aLogo" x1="2" y1="2" x2="26" y2="26"><stop stop-color="#1a56db"/><stop offset="1" stop-color="#0e9f6e"/></linearGradient></defs>
+          </svg>
+          Stackly
+        </a>
+        <h2>Get Started</h2>
+        <p>Start your 14-day free trial. No credit card required.</p>
+        <button type="button" class="btn btn-outline btn-lg" onclick="history.back()" style="margin-top:18px;">Go Back</button>
+      </div>
+
+      <form id="register-form">
+        <div class="form-group">
+          <label class="form-label">Full Name</label>
+          <input type="text" id="reg-name" class="form-input" placeholder="John Doe" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" id="reg-email" class="form-input" placeholder="john@company.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Company Name</label>
+          <input type="text" class="form-input" placeholder="Acme Inc.">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <input type="password" id="reg-password" class="form-input" placeholder="Create a strong password" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Confirm Password</label>
+          <input type="password" id="reg-confirm" class="form-input" placeholder="Confirm your password" required>
+        </div>
+        <div class="form-group">
+          <label style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--gray);cursor:pointer;">
+            <input type="checkbox" required style="accent-color:var(--primary);margin-top:3px;">
+            <span>I agree to the <a href="#" style="color:var(--primary);font-weight:500;">Terms of Service</a> and <a href="#" style="color:var(--primary);font-weight:500;">Privacy Policy</a></span>
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Create Account</button>
+      </form>
+
+      <div class="auth-footer">
+        <p>Already have an account? <a href="login.html">Sign In</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

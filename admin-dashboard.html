@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Stackly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <svg viewBox="0 0 28 28" fill="none" width="28" height="28">
+          <rect x="2" y="2" width="24" height="24" rx="6" fill="url(#dLogo)"/>
+          <path d="M9 14l4-4 6 6m0 0l-4 4m4-4L9 14" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs><linearGradient id="dLogo" x1="2" y1="2" x2="26" y2="26"><stop stop-color="#1a56db"/><stop offset="1" stop-color="#0e9f6e"/></linearGradient></defs>
+        </svg>
+        Stackly
+      </div>
+      <nav class="sidebar-nav">
+        <a href="admin-dashboard.html" class="sidebar-nav-item active">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          Dashboard
+        </a>
+        <a href="404.html" class="sidebar-nav-item">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          Users
+        </a>
+        <a href="404.html" class="sidebar-nav-item">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          Analytics
+        </a>
+        <a href="404.html" class="sidebar-nav-item">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+          Threats
+        </a>
+        <a href="404.html" class="sidebar-nav-item">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          Reports
+        </a>
+        <a href="404.html" class="sidebar-nav-item">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Settings
+        </a>
+        <div style="border-top:1px solid rgba(255,255,255,0.1);margin:16px 12px;padding-top:16px;">
+          <button id="logout-btn" class="sidebar-nav-item" style="width:100%;background:none;border:none;color:rgba(255,255,255,0.7);">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+            Logout
+          </button>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <header class="dashboard-header">
+        <div>
+          <h1 class="dashboard-title">Admin Dashboard</h1>
+          <p style="font-size:13px;color:var(--gray-light);margin-top:4px;">Overview of your organization's security posture</p>
+        </div>
+        <div class="dashboard-user">
+          <div style="text-align:right;">
+            <div class="dashboard-user-name" style="font-weight:600;font-size:14px;color:var(--dark);">Admin User</div>
+            <div class="dashboard-user-role" style="font-size:12px;color:var(--gray-light);">Administrator</div>
+          </div>
+          <div class="dashboard-user-avatar dashboard-user-initial">A</div>
+        </div>
+      </header>
+
+      <div class="dashboard-body">
+        <!-- Stats Cards -->
+        <div class="dashboard-grid">
+          <div class="dashboard-card">
+            <div class="dashboard-card-header">
+              <span class="dashboard-card-title">Total Users</span>
+              <div class="dashboard-card-icon blue"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+            </div>
+            <div class="dashboard-card-value">1,247</div>
+            <div class="dashboard-card-change up">+12% from last month</div>
+          </div>
+          <div class="dashboard-card">
+            <div class="dashboard-card-header">
+              <span class="dashboard-card-title">Active Endpoints</span>
+              <div class="dashboard-card-icon green"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+            </div>
+            <div class="dashboard-card-value">2,847</div>
+            <div class="dashboard-card-change up">+8% from last month</div>
+          </div>
+          <div class="dashboard-card">
+            <div class="dashboard-card-header">
+              <span class="dashboard-card-title">Threats Blocked</span>
+              <div class="dashboard-card-icon amber"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg></div>
+            </div>
+            <div class="dashboard-card-value">45.2K</div>
+            <div class="dashboard-card-change up">+23% from last month</div>
+          </div>
+          <div class="dashboard-card">
+            <div class="dashboard-card-header">
+              <span class="dashboard-card-title">System Health</span>
+              <div class="dashboard-card-icon red"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>
+            </div>
+            <div class="dashboard-card-value" style="color:var(--secondary);">99.99%</div>
+            <div class="dashboard-card-change up">All systems operational</div>
+          </div>
+        </div>
+
+        <!-- Recent Users Table -->
+        <div class="dashboard-card" style="margin-bottom:24px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+            <h3 style="font-size:18px;">Recent Users</h3>
+            <a href="404.html" class="btn btn-sm btn-primary">View All</a>
+          </div>
+          <div style="overflow-x:auto;">
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>User</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Status</th>
+                  <th>Last Active</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="display:flex;align-items:center;gap:10px;">
+                    <div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--secondary));display:flex;align-items:center;justify-content:center;color:white;font-size:12px;font-weight:600;">SC</div>
+                    Sarah Chen
+                  </td>
+                  <td>sarah@techflow.com</td>
+                  <td>Admin</td>
+                  <td><span class="status-badge status-active">Active</span></td>
+                  <td>2 min ago</td>
+                </tr>
+                <tr>
+                  <td style="display:flex;align-items:center;gap:10px;">
+                    <div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#8b5cf6,#ec4899);display:flex;align-items:center;justify-content:center;color:white;font-size:12px;font-weight:600;">MJ</div>
+                    Marcus Johnson
+                  </td>
+                  <td>marcus@datavault.io</td>
+                  <td>User</td>
+                  <td><span class="status-badge status-active">Active</span></td>
+                  <td>15 min ago</td>
+                </tr>
+                <tr>
+                  <td style="display:flex;align-items:center;gap:10px;">
+                    <div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#f59e0b,#ef4444);display:flex;align-items:center;justify-content:center;color:white;font-size:12px;font-weight:600;">ER</div>
+                    Elena Rodriguez
+                  </td>
+                  <td>elena@cloudsecure.net</td>
+                  <td>User</td>
+                  <td><span class="status-badge status-pending">Pending</span></td>
+                  <td>1 hour ago</td>
+                </tr>
+                <tr>
+                  <td style="display:flex;align-items:center;gap:10px;">
+                    <div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#06b6d4,#3b82f6);display:flex;align-items:center;justify-content:center;color:white;font-size:12px;font-weight:600;">DP</div>
+                    David Park
+                  </td>
+                  <td>david@netguard.com</td>
+                  <td>User</td>
+                  <td><span class="status-badge status-active">Active</span></td>
+                  <td>3 hours ago</td>
+                </tr>
+                <tr>
+                  <td style="display:flex;align-items:center;gap:10px;">
+                    <div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#10b981,#059669);display:flex;align-items:center;justify-content:center;color:white;font-size:12px;font-weight:600;">AW</div>
+                    Alice Wong
+                  </td>
+                  <td>alice@cyberco.com</td>
+                  <td>User</td>
+                  <td><span class="status-badge status-inactive">Inactive</span></td>
+                  <td>2 days ago</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Security Alerts & Recent Activity -->
+        <div class="grid-2" style="gap:24px;">
+          <div class="dashboard-card">
+            <h3 style="font-size:18px;margin-bottom:20px;">Security Alerts</h3>
+            <div style="display:flex;flex-direction:column;gap:16px;">
+              <div style="display:flex;align-items:flex-start;gap:12px;padding:12px;background:var(--light);border-radius:var(--radius);">
+                <div style="width:36px;height:36px;border-radius:50%;background:rgba(245,158,11,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#f59e0b" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                </div>
+                <div>
+                  <p style="font-weight:600;font-size:14px;color:var(--dark);">Suspicious login attempt</p>
+                  <p style="font-size:12px;color:var(--gray-light);margin-top:2px;">IP 185.220.101.x tried to access admin panel</p>
+                  <p style="font-size:11px;color:var(--gray-lighter);margin-top:4px;">10 minutes ago</p>
+                </div>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:12px;padding:12px;background:var(--light);border-radius:var(--radius);">
+                <div style="width:36px;height:36px;border-radius:50%;background:rgba(239,68,68,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#ef4444" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+                </div>
+                <div>
+                  <p style="font-weight:600;font-size:14px;color:var(--dark);">DDoS attack blocked</p>
+                  <p style="font-size:12px;color:var(--gray-light);margin-top:2px;">1.2M requests blocked from botnet</p>
+                  <p style="font-size:11px;color:var(--gray-lighter);margin-top:4px;">32 minutes ago</p>
+                </div>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:12px;padding:12px;background:var(--light);border-radius:var(--radius);">
+                <div style="width:36px;height:36px;border-radius:50%;background:rgba(14,159,110,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#0e9f6e" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <div>
+                  <p style="font-weight:600;font-size:14px;color:var(--dark);">Malware quarantined</p>
+                  <p style="font-size:12px;color:var(--gray-light);margin-top:2px;">Trojan.Win32 detected and isolated</p>
+                  <p style="font-size:11px;color:var(--gray-lighter);margin-top:4px;">1 hour ago</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dashboard-card">
+            <h3 style="font-size:18px;margin-bottom:20px;">System Status</h3>
+            <div style="display:flex;flex-direction:column;gap:16px;">
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+                  <span style="font-size:14px;color:var(--dark);">Threat Detection Engine</span>
+                  <span style="font-size:14px;color:var(--secondary);font-weight:600;">Running</span>
+                </div>
+                <div style="height:6px;background:var(--border);border-radius:3px;overflow:hidden;">
+                  <div style="height:100%;width:98%;background:var(--secondary);border-radius:3px;"></div>
+                </div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+                  <span style="font-size:14px;color:var(--dark);">AI Analysis Pipeline</span>
+                  <span style="font-size:14px;color:var(--secondary);font-weight:600;">Running</span>
+                </div>
+                <div style="height:6px;background:var(--border);border-radius:3px;overflow:hidden;">
+                  <div style="height:100%;width:95%;background:var(--secondary);border-radius:3px;"></div>
+                </div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+                  <span style="font-size:14px;color:var(--dark);">Cloud Scanner</span>
+                  <span style="font-size:14px;color:var(--secondary);font-weight:600;">Running</span>
+                </div>
+                <div style="height:6px;background:var(--border);border-radius:3px;overflow:hidden;">
+                  <div style="height:100%;width:92%;background:var(--secondary);border-radius:3px;"></div>
+                </div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+                  <span style="font-size:14px;color:var(--dark);">Compliance Monitor</span>
+                  <span style="font-size:14px;color:var(--accent);font-weight:600;">Scanning</span>
+                </div>
+                <div style="height:6px;background:var(--border);border-radius:3px;overflow:hidden;">
+                  <div style="height:100%;width:67%;background:var(--accent);border-radius:3px;"></div>
+                </div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+                  <span style="font-size:14px;color:var(--dark);">Database Backup</span>
+                  <span style="font-size:14px;color:var(--gray-light);font-weight:600;">Scheduled</span>
+                </div>
+                <div style="height:6px;background:var(--border);border-radius:3px;overflow:hidden;">
+                  <div style="height:100%;width:0%;background:var(--primary);border-radius:3px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Admin auth guard
+    document.addEventListener('DOMContentLoaded', () => {
+      const user = Auth.getUser();
+      if (!user || user.role !== 'admin') {
+        // For demo, auto-login as admin if not logged in
+        if (!user) {
+          Auth.login('admin@stackly.com', 'password', 'admin');
+          window.location.reload();
+          return;
+        }
+        window.location.href = 'login.html';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | Stackly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="error-page">
+    <div style="text-align:center;">
+      <!-- Animated particles background effect -->
+      <div style="position:relative;margin-bottom:32px;">
+        <svg width="200" height="200" viewBox="0 0 200 200" style="margin:0 auto;opacity:0.3;">
+          <circle cx="100" cy="100" r="80" fill="none" stroke="white" stroke-width="1" stroke-dasharray="10 5">
+            <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="20s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="100" cy="100" r="60" fill="none" stroke="white" stroke-width="1" stroke-dasharray="5 10">
+            <animateTransform attributeName="transform" type="rotate" from="360 100 100" to="0 100 100" dur="15s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="100" cy="100" r="40" fill="none" stroke="#f59e0b" stroke-width="1.5">
+            <animate attributeName="r" values="40;45;40" dur="3s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite"/>
+          </circle>
+          <text x="100" y="108" text-anchor="middle" fill="white" font-size="28" font-weight="800" font-family="Inter">404</text>
+        </svg>
+      </div>
+      <div class="error-code">404</div>
+      <h1 class="error-title">Page Not Found</h1>
+      <p class="error-desc">The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="index.html" class="btn btn-accent btn-lg">Go Home</a>
+        <button type="button" class="btn btn-outline btn-lg" onclick="history.back()">Go Back</button>
+        <a href="contact.html" class="btn btn-outline btn-lg">Contact Support</a>
+      </div>
+      <!-- Quick Links -->
+      <div style="margin-top:48px;display:flex;gap:24px;justify-content:center;flex-wrap:wrap;">
+        <a href="index.html" style="color:rgba(255,255,255,0.6);font-size:14px;">Home</a>
+        <a href="about.html" style="color:rgba(255,255,255,0.6);font-size:14px;">About</a>
+        <a href="services.html" style="color:rgba(255,255,255,0.6);font-size:14px;">Services</a>
+        <a href="blog.html" style="color:rgba(255,255,255,0.6);font-size:14px;">Blog</a>
+        <a href="contact.html" style="color:rgba(255,255,255,0.6);font-size:14px;">Contact</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

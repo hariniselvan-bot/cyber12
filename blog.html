@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Stackly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">
+      <img src="assets/images/logo.webp" alt="Stackly logo" class="logo-img">
+      <span>Stackly</span>
+    </a>
+    <div class="navbar-nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="blog.html" class="nav-link active">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+    <div class="navbar-auth" style="display:flex;align-items:center;gap:16px;">
+      <a href="login.html" class="nav-link">Login</a>
+      <a href="register.html" class="navbar-cta">Get Protected</a>
+    </div>
+    <button class="mobile-menu-btn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="services.html" class="nav-link">Services</a>
+    <a href="blog.html" class="nav-link active">Blog</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+  </div>
+
+  <!-- Page Header -->
+  <section class="section section-dark" style="padding-top:140px;padding-bottom:80px;text-align:center;">
+    <div class="container">
+      <span class="label label-accent">Blog</span>
+      <h1 style="color:white;margin-top:16px;font-size:48px;">Security Insights &amp; Research</h1>
+      <p style="color:rgba(255,255,255,0.7);max-width:600px;margin:16px auto 0;">Stay ahead of emerging threats with analysis from our expert research team.</p>
+    </div>
+  </section>
+
+  <!-- Featured Post -->
+  <section class="section" style="background:white;">
+    <div class="container">
+      <div class="animate-fade" style="display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;background:var(--light);border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);">
+        <img src="assets/images/blog-vpn.webp" alt="VPN Security" style="width:100%;height:100%;object-fit:cover;min-height:300px;">
+        <div style="padding:40px;">
+          <span class="blog-category" style="color:var(--accent);">Featured / Threat Intel</span>
+          <h2 style="margin:12px 0 16px;font-size:28px;">Zero-Day Exploit Targets Popular VPN Software: What You Need to Know</h2>
+          <p style="margin-bottom:16px;">A critical vulnerability discovered in enterprise VPN solutions affects over 50,000 organizations globally. Our research team breaks down the exploit and provides immediate mitigation steps.</p>
+          <p class="blog-date">March 15, 2026 &bull; 8 min read</p>
+          <a href="404.html" class="service-link" style="margin-top:16px;display:inline-flex;">Read Article &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Grid -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="grid-3 animate-stagger">
+        <article class="blog-card">
+          <img src="assets/images/blog-compliance.webp" alt="NIS2 Compliance" class="blog-card-image">
+          <div class="blog-card-content">
+            <span class="blog-category" style="color:var(--secondary);">Compliance</span>
+            <h3>Preparing for NIS2: What EU Companies Must Know Before the Deadline</h3>
+            <p class="blog-date">March 8, 2026 &bull; 6 min read</p>
+            <p class="blog-excerpt">The new NIS2 directive expands cybersecurity requirements. Here's how to prepare your organization.</p>
+          </div>
+        </article>
+        <article class="blog-card">
+          <img src="assets/images/blog-cloud.webp" alt="Cloud Security" class="blog-card-image">
+          <div class="blog-card-content">
+            <span class="blog-category" style="color:var(--primary);">Cloud Security</span>
+            <h3>Multi-Cloud Security Posture Management: A Complete Guide for 2026</h3>
+            <p class="blog-date">February 28, 2026 &bull; 10 min read</p>
+            <p class="blog-excerpt">Managing security across AWS, Azure, and GCP requires a unified approach. Our guide shows you how.</p>
+          </div>
+        </article>
+        <article class="blog-card">
+          <img src="assets/images/dashboard-ui.webp" alt="AI Security" class="blog-card-image">
+          <div class="blog-card-content">
+            <span class="blog-category" style="color:var(--accent);">AI &amp; ML</span>
+            <h3>How AI is Revolutionizing Threat Detection: Beyond Signature-Based Methods</h3>
+            <p class="blog-date">February 20, 2026 &bull; 7 min read</p>
+            <p class="blog-excerpt">Machine learning models now detect novel threats in milliseconds. We explore the technology.</p>
+          </div>
+        </article>
+        <article class="blog-card">
+          <img src="assets/images/soc-room.webp" alt="SOC Operations" class="blog-card-image">
+          <div class="blog-card-content">
+            <span class="blog-category" style="color:var(--primary);">Operations</span>
+            <h3>Building a World-Class Security Operations Center: Lessons from the Front Lines</h3>
+            <p class="blog-date">February 12, 2026 &bull; 9 min read</p>
+            <p class="blog-excerpt">Our SOC leaders share the frameworks and processes that drive our 99.99% detection rate.</p>
+          </div>
+        </article>
+        <article class="blog-card">
+          <img src="assets/images/blog-vpn.webp" alt="Zero Trust" class="blog-card-image">
+          <div class="blog-card-content">
+            <span class="blog-category" style="color:var(--secondary);">Architecture</span>
+            <h3>Zero Trust Implementation: Common Pitfalls and How to Avoid Them</h3>
+            <p class="blog-date">February 5, 2026 &bull; 8 min read</p>
+            <p class="blog-excerpt">We've helped 500+ organizations implement Zero Trust. Here are the mistakes we see most often.</p>
+          </div>
+        </article>
+        <article class="blog-card">
+          <img src="assets/images/blog-cloud.webp" alt="DevSecOps" class="blog-card-image">
+          <div class="blog-card-content">
+            <span class="blog-category" style="color:var(--accent);">DevSecOps</span>
+            <h3>Shifting Left: Integrating Security into Your CI/CD Pipeline</h3>
+            <p class="blog-date">January 28, 2026 &bull; 6 min read</p>
+            <p class="blog-excerpt">Security shouldn't slow down development. Learn how to automate security testing in your pipeline.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="section" style="background:linear-gradient(135deg,var(--primary),var(--secondary));text-align:center;">
+    <div class="container" style="max-width:600px;">
+      <h2 style="color:white;margin-bottom:16px;">Stay Informed</h2>
+      <p style="color:rgba(255,255,255,0.9);margin-bottom:32px;">Get the latest security research, threat alerts, and best practices delivered to your inbox weekly.</p>
+      <form style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;" onsubmit="event.preventDefault();alert('Thanks for subscribing!');">
+        <input type="email" placeholder="Enter your email" class="form-input" style="max-width:320px;background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.3);color:white;" required>
+        <button type="submit" class="btn btn-accent">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/images/logo.webp" alt="Stackly logo" class="logo-img">
+          <span>Stackly</span>
+        </div>
+        <p class="footer-desc">Enterprise-grade cybersecurity for modern teams. AI-powered threat detection, continuous monitoring, and compliance automation.</p>
+      </div>
+      <div class="footer-column"><h4>Product</h4><ul class="footer-links"><li><a href="services.html">Network Security</a></li><li><a href="services.html">Cloud Security</a></li><li><a href="services.html">Compliance</a></li><li><a href="index.html">Pricing</a></li><li><a href="services.html">Integrations</a></li></ul></div>
+      <div class="footer-column"><h4>Company</h4><ul class="footer-links"><li><a href="about.html">About</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Careers</a></li><li><a href="contact.html">Contact</a></li><li><a href="contact.html">Partners</a></li></ul></div>
+      <div class="footer-column"><h4>Resources</h4><ul class="footer-links"><li><a href="services.html">Documentation</a></li><li><a href="services.html">API Reference</a></li><li><a href="blog.html">Case Studies</a></li><li><a href="index.html">Status Page</a></li><li><a href="contact.html">Community</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 Stackly, Inc. All rights reserved.</p>
+      <div class="footer-legal"><a href="404.html">Privacy Policy</a><a href="404.html">Terms of Service</a><a href="404.html">Cookie Settings</a></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
