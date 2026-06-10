@@ -86,5 +86,131 @@
   </div>
 
   <script src="assets/js/main.js"></script>
+  <style>
+    /* ==========================
+   MOBILE RESPONSIVE LOGIN
+========================== */
+
+@media (max-width: 768px) {
+
+  .navbar{
+    padding:15px 20px;
+  }
+
+  .navbar-nav{
+    display:none;
+  }
+
+  .mobile-menu-btn{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+  }
+
+  .auth-page{
+    min-height:100vh;
+    padding:100px 15px 30px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .auth-card{
+    width:100%;
+    max-width:100%;
+    padding:25px 20px;
+    border-radius:20px;
+  }
+
+  .auth-header h2{
+    font-size:28px;
+  }
+
+  .auth-header p{
+    font-size:14px;
+  }
+
+  .role-toggle{
+    display:flex;
+    gap:8px;
+    margin:20px 0;
+  }
+
+  .role-option{
+    flex:1;
+    text-align:center;
+    padding:12px 10px;
+    font-size:14px;
+  }
+
+  .form-group{
+    margin-bottom:16px;
+  }
+
+  .form-label{
+    font-size:14px;
+  }
+
+  .form-input{
+    height:50px;
+    font-size:15px;
+    padding:0 15px;
+  }
+
+  .btn-lg{
+    height:52px;
+    font-size:15px;
+  }
+
+  .auth-footer{
+    margin-top:20px;
+  }
+
+  .auth-footer p{
+    font-size:13px;
+  }
+
+}
+
+/* Extra Small Phones */
+
+@media (max-width: 480px){
+
+  .auth-page{
+    padding:90px 12px 20px;
+  }
+
+  .auth-card{
+    padding:22px 16px;
+  }
+
+  .auth-header h2{
+    font-size:24px;
+  }
+
+  .auth-header p{
+    font-size:13px;
+  }
+
+  .role-option{
+    font-size:13px;
+    padding:10px 6px;
+  }
+
+  .form-input{
+    height:48px;
+    font-size:14px;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .navbar-brand span{
+    font-size:18px;
+  }
+
+}
+  </style>
 </body>
 </html>
