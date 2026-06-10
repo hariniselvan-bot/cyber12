@@ -211,6 +211,76 @@
   }
 
 }
+    @media (max-width:768px){
+
+  .navbar-nav{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:75%;
+    height:100vh;
+    background:#fff;
+    display:flex !important;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+    transition:0.4s ease;
+    z-index:999;
+    box-shadow:-10px 0 30px rgba(0,0,0,.1);
+  }
+
+  .navbar-nav.active{
+    right:0;
+  }
+
+  .mobile-menu-btn{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    background:none;
+    border:none;
+    cursor:pointer;
+    z-index:1000;
+  }
+
+  .mobile-menu-btn span{
+    width:25px;
+    height:3px;
+    background:#000;
+    border-radius:10px;
+    transition:0.3s;
+  }
+
+  .mobile-menu-btn.active span:nth-child(1){
+    transform:translateY(8px) rotate(45deg);
+  }
+
+  .mobile-menu-btn.active span:nth-child(2){
+    opacity:0;
+  }
+
+  .mobile-menu-btn.active span:nth-child(3){
+    transform:translateY(-8px) rotate(-45deg);
+  }
+}
   </style>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const menuBtn = document.querySelector(".mobile-menu-btn");
+  const navMenu = document.querySelector(".navbar-nav");
+
+  if(menuBtn && navMenu){
+
+    menuBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+      menuBtn.classList.toggle("active");
+    });
+
+  }
+
+});
+</script>
 </body>
 </html>
