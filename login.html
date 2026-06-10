@@ -264,21 +264,91 @@
     transform:translateY(-8px) rotate(-45deg);
   }
 }
-  </style>
-  <script>
-document.addEventListener("DOMContentLoaded", () => {
+    @media (max-width:768px){
 
-  const menuBtn = document.querySelector(".mobile-menu-btn");
-  const navMenu = document.querySelector(".navbar-nav");
-
-  if(menuBtn && navMenu){
-
-    menuBtn.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-      menuBtn.classList.toggle("active");
-    });
-
+  .navbar-nav{
+      position:fixed;
+      top:0;
+      right:-100%;
+      width:75%;
+      height:100vh;
+      background:#fff;
+      display:flex !important;
+      flex-direction:column;
+      align-items:flex-start;
+      padding:100px 40px 40px;
+      gap:30px;
+      transition:.4s ease;
+      z-index:1000;
+      box-shadow:-10px 0 30px rgba(0,0,0,.1);
+      overflow-y:auto;
   }
+
+  .navbar-nav.active{
+      right:0;
+  }
+
+  .nav-link{
+      width:100%;
+      font-size:18px;
+      color:#4b5563;
+      text-decoration:none;
+      padding-bottom:15px;
+  }
+
+  .nav-link.active{
+      color:#2563eb;
+      border-bottom:2px solid #2563eb;
+  }
+
+  .mobile-menu-btn{
+      display:flex;
+      flex-direction:column;
+      gap:5px;
+      background:none;
+      border:none;
+      cursor:pointer;
+      z-index:1100;
+  }
+
+  .mobile-menu-btn span{
+      width:26px;
+      height:3px;
+      background:#111827;
+      border-radius:10px;
+      transition:.3s;
+  }
+
+  .mobile-menu-btn.active span:nth-child(1){
+      transform:translateY(8px) rotate(45deg);
+  }
+
+  .mobile-menu-btn.active span:nth-child(2){
+      opacity:0;
+  }
+
+  .mobile-menu-btn.active span:nth-child(3){
+      transform:translateY(-8px) rotate(-45deg);
+  }
+
+  body.menu-open::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,.25);
+      z-index:999;
+  }
+}
+  </style>
+<script>
+const menuBtn = document.querySelector(".mobile-menu-btn");
+const navMenu = document.querySelector(".navbar-nav");
+
+menuBtn.addEventListener("click", () => {
+
+    menuBtn.classList.toggle("active");
+    navMenu.classList.toggle("active");
+    document.body.classList.toggle("menu-open");
 
 });
 </script>
