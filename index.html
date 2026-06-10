@@ -390,7 +390,228 @@
       </div>
     </div>
   </section>
+<style>
+  /* ===========================
+   PRICING SECTION
+=========================== */
 
+.grid-3{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    align-items:stretch;
+}
+
+.pricing-card{
+    position:relative;
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:24px;
+    padding:40px 30px;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    transition:all .3s ease;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.pricing-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+}
+
+.pricing-card.featured{
+    border:2px solid #2563eb;
+    transform:scale(1.03);
+    box-shadow:0 20px 50px rgba(37,99,235,.15);
+}
+
+.pricing-card.featured:hover{
+    transform:scale(1.03) translateY(-8px);
+}
+
+.pricing-badge{
+    position:absolute;
+    top:-14px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#2563eb;
+    color:#fff;
+    padding:8px 18px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+.pricing-name{
+    font-size:28px;
+    font-weight:800;
+    margin-bottom:12px;
+    color:#111827;
+}
+
+.pricing-desc{
+    color:#6b7280;
+    margin-bottom:24px;
+    line-height:1.6;
+}
+
+.pricing-price{
+    font-size:52px;
+    font-weight:800;
+    color:#111827;
+    line-height:1;
+    margin-bottom:8px;
+}
+
+.pricing-period{
+    color:#9ca3af;
+    margin-bottom:32px;
+}
+
+.pricing-features{
+    list-style:none;
+    padding:0;
+    margin:0;
+    flex:1;
+}
+
+.pricing-features li{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:18px;
+    color:#374151;
+    font-size:15px;
+}
+
+.pricing-features svg{
+    width:18px;
+    height:18px;
+    color:#10b981;
+    flex-shrink:0;
+}
+
+.pricing-card .btn{
+    width:100%;
+    margin-top:auto;
+}
+
+.btn{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:54px;
+    border-radius:14px;
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#2563eb;
+    color:#fff;
+}
+
+.btn-primary:hover{
+    transform:translateY(-2px);
+}
+
+.btn-dark{
+    background:#111827;
+    color:#fff;
+}
+
+.btn-dark:hover{
+    transform:translateY(-2px);
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width:992px){
+
+    .grid-3{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .pricing-card.featured{
+        transform:none;
+    }
+
+    .pricing-card.featured:hover{
+        transform:translateY(-8px);
+    }
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+    .grid-3{
+        grid-template-columns:1fr;
+        gap:24px;
+    }
+
+    .pricing-card{
+        padding:30px 24px;
+    }
+
+    .pricing-name{
+        font-size:24px;
+    }
+
+    .pricing-price{
+        font-size:42px;
+    }
+
+    .pricing-card.featured{
+        transform:none;
+    }
+
+    .pricing-card.featured:hover{
+        transform:translateY(-8px);
+    }
+
+    .pricing-features li{
+        font-size:14px;
+    }
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media (max-width:480px){
+
+    .pricing-card{
+        padding:24px 20px;
+        border-radius:20px;
+    }
+
+    .pricing-name{
+        font-size:22px;
+    }
+
+    .pricing-price{
+        font-size:36px;
+    }
+
+    .pricing-desc,
+    .pricing-period{
+        font-size:14px;
+    }
+
+    .btn{
+        height:50px;
+        font-size:14px;
+    }
+}
+</style>
   <!-- FAQ Section -->
   <section class="section section-light">
     <div class="container" style="max-width:800px;">
